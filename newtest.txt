@@ -1,0 +1,6 @@
+Test cases:
+1. Create file with simple text content and verify the file is added correctly.
+2. Update an existing text file and confirm the latest content is saved.
+3. Create a second file with a different name and ensure both files exist in the repository.
+4. Validate that file names use the expected .txt extension.
+5. Check that the repository can store plain text content without formatting issues.
