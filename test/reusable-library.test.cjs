@@ -25,9 +25,22 @@ const files = [
   'sendEmail-Brevo.ts',
 ];
 
+const removedFiles = [
+  'assistant-placeholder.md',
+  'firoz.txt',
+  'newtest.txt',
+  'sawan.txt',
+];
+
 test('repository contains the expected source files', () => {
   for (const file of files) {
     assert.ok(fs.existsSync(path.join(repo, file)), `${file} should exist`);
+  }
+});
+
+test('repository no longer contains unnecessary files', () => {
+  for (const file of removedFiles) {
+    assert.ok(!fs.existsSync(path.join(repo, file)), `${file} should be removed`);
   }
 });
 
